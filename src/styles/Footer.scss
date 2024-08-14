@@ -1,0 +1,20 @@
+.footer{
+    height: 209px;
+    .collapse {
+        width: calc(100% - 20px);
+    }
+    padding-left: 20px;
+
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; 
+
+    .footer-logo
+    {
+        transform: translateY(3%)
+    } p {
+        font-size: 12px;
+    }
+}

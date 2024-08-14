@@ -1,0 +1,71 @@
+.collapse {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+    width: 60%; /* Largeur fixe pour tous les éléments collapse */
+    max-width: 60%; /* Largeur maximale */
+    
+    &-title {
+        background-color: #FF6060;
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 1rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        border-radius: 0.3125rem;
+        transition: background-color 0.3s ease;
+        font-family: 'Montserrat';
+        width: 100%; /* Largeur fixe pour les titres */
+        box-sizing: border-box; /* S'assure que padding est inclus dans la largeur */
+    }
+
+    &-icon {
+        width: 1.125rem;
+        height: 1.125rem;
+        transition: transform 0.3s ease;
+    }
+
+    &-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        background: #f7f7f7;
+        color: #333;
+        padding: 0 1rem;
+        width: 100%; /* Largeur fixe pour le contenu */
+        box-sizing: border-box; /* S'assure que padding est inclus dans la largeur */
+    }
+
+    &.open .collapse-content {
+        max-height: 200px; /* Hauteur maximale lorsque ouvert */
+        padding: 1rem;
+    }
+
+    &.open .collapse-icon {
+        transform: rotate(180deg);
+    }
+}
+
+@media (min-width: 768px) {
+    .collapse {
+        &-title {
+            font-size: 1.25rem;
+        }
+
+        &-content {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media (min-width: 74px) {
+    .collapse {
+        &-title {
+            height: 15px;
+        }
+    }
+}

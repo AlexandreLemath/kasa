@@ -1,0 +1,74 @@
+// src/styles/Banner.scss
+.banner {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    text-align: center;
+    height: 150px; /* Ajusté à la hauteur demandée */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    transform: translateX(3%);
+    border-radius: 25px;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); 
+      border-radius: 25px;  
+    }
+  
+    h1 {
+      position: relative; 
+      font-size: 2.5em;
+      padding: 20px;
+      font-family: Montserrat; 
+    }
+  }
+  @media (max-width: 756px) {
+    .banner {
+   
+      h1 {
+        font-size: 2.3em;
+
+      }
+    } 
+  }
+  @media (max-width: 704px) {
+    .banner {
+      
+
+      h1 {
+        font-size: 2.1em;
+
+      }
+    } 
+  }
+
+  @media (max-width: 650px) {
+    .banner {
+
+      h1 {
+        font-size: 1.8em;
+
+      }
+    } 
+  }
+  @media (max-width:400px) {
+    .banner {
+      
+
+      h1 {
+        font-size: 2em;
+
+      }
+    } 
+  } 
+  

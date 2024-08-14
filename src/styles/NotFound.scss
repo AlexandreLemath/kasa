@@ -1,0 +1,38 @@
+/* NotFound.css */
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .not-found-title {
+    font-size: 8rem;
+    color: #ff6060;
+    margin: 0;
+  }
+  
+  .not-found-message {
+    font-size: 1.5rem;
+    color: #ff6060;
+    margin: 1rem 0;
+    margin-bottom: 100px;
+  }
+  
+  .not-found-link {
+    font-size: 1rem;
+    color: #000000;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  
+  .not-found-link:hover {
+    text-decoration: underline; /* Souligne le texte au survol */
+  }
+  

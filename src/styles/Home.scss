@@ -1,0 +1,20 @@
+// src/styles/Home.scss
+.main {
+  width: 100%;
+ display: flex;
+
+}
+.logements {
+  margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ padding-top: 20px;
+    gap: 20px; 
+    width: 95%;
+    background: #F6F6F6; /* Couleur de fond pour chaque logement */
+    border-radius: 25px; /* Bords arrondis */
+    width: 90% ;
+    box-sizing: border-box; 
+    margin-left: 2.7%;
+  }
