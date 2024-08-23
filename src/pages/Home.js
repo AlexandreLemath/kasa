@@ -4,7 +4,7 @@ import Banner from '../components/Banner';
 import Card from '../components/Card';
 import logements from '../data/logements.json';
 import '../styles/Home.scss';
-import bannerImage from 'C:\\Users\\Mistgun\\OneDrive\\Documents\\Projet-5-main\\kasa\\src\\assets\\images\\banner.jpg'; 
+import bannerImage from '../assets/images/banner.jpg'; 
 
 const Home = () => {
   console.log('Logements data:', logements); // Ajoutez ce journal pour vérifier les données

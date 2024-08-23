@@ -1,19 +1,27 @@
 import React, { useState } from 'react';
 import '../styles/Collapse.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+// Import your image
+import myCustomIcon from '../assets/images/Vector (8).png';
+
 const Collapse = ({ title, children }) => {
+    const [isOpen, setIsOpen] = useState(false); 
 
-    const [isOpen , setIsOpen] = useState(false) ; 
     const toggleCollapse = () => {
-        setIsOpen(!isOpen)
+        setIsOpen(!isOpen);
     }
-    return (
-        <div className={`collapse ${isOpen ? 'open' : ''}` }>
-            <div className="collapse-title"     >
-            {title}
-            <FontAwesomeIcon className={`collapse-icon ${isOpen ? 'rotate' : ''}`} icon={faChevronDown} onClick={toggleCollapse} />
 
+    return (
+        <div className={`collapse ${isOpen ? 'open' : ''}`}>
+            <div className="collapse-title">
+                {title}
+                {/* Replace FontAwesomeIcon with your image */}
+                <img
+                    className={`collapse-icon ${isOpen ? 'rotate' : ''}`}
+                    src={myCustomIcon}
+                    alt="Toggle Icon"
+                    onClick={toggleCollapse}
+                    style={{ cursor: 'pointer' }} // optional: add cursor style
+                />
             </div>
             <div className="collapse-content">
                 {children}

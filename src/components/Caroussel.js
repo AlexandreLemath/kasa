@@ -1,17 +1,9 @@
 import React, { useState } from 'react';
 import '../styles/Caroussel.scss';
 
-const LeftArrow = () => (
-  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
-);
-
-const RightArrow = () => (
-  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
-);
+// Import your custom images
+import leftArrowImage from '../assets/images/left-arrow.png';
+import rightArrowImage from '../assets/images/right-arrow.png';
 
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -30,15 +22,24 @@ const Carousel = ({ images }) => {
 
   return (
     <div className="carousel">
-      <button onClick={handlePrevClick} className="carousel-button left">
-        <LeftArrow />
-      </button>
+      {images.length > 1 && (
+        <button onClick={handlePrevClick} className="carousel-button left">
+          <img src={leftArrowImage} alt="Flèche gauche" />
+        </button>
+      )}
       <div className="carousel-image-container">
         <img src={images[currentIndex]} alt={`Image ${currentIndex + 1}`} className="carousel-image" />
+        {images.length > 1 && (
+          <div className="carousel-pagination">
+            {currentIndex + 1} / {images.length}
+          </div>
+        )}
       </div>
-      <button onClick={handleNextClick} className="carousel-button right">
-        <RightArrow />
-      </button>
+      {images.length > 1 && (
+        <button onClick={handleNextClick} className="carousel-button right">
+          <img src={rightArrowImage} alt="Flèche droite" />
+        </button>
+      )}
     </div>
   );
 };

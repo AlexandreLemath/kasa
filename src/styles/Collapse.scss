@@ -24,9 +24,9 @@
     }
 
     &-icon {
-        width: 1.125rem;
-        height: 1.125rem;
-        transition: transform 0.3s ease;
+        width: 20px; /* Ajustez la largeur selon vos besoins */
+        height: auto; /* Conserve le ratio de l'image */
+        transition: transform 0.3s ease
     }
 
     &-content {

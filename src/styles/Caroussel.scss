@@ -55,7 +55,16 @@
       height: auto;
       display: block;
     }
-    
+    .carousel-pagination {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white; /* Ajustez la couleur en fonction de votre design */
+      font-size: 18px; /* Ajustez la taille en fonction de votre design */
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
   
     @media (max-width: 768px) {
       .carousel-button {
