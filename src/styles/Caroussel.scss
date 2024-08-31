@@ -72,4 +72,8 @@
       }
     }
   }
-  
+  @media (max-width: 500px) {
+    .carousel-pagination{
+      display: none;
+    }
+  }
