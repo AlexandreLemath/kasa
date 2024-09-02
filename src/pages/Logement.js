@@ -70,6 +70,8 @@ const Logement = () => {
         </div>
       </div>
       <p className='city-name'>{logement.location}</p>
+
+      {/* Div pour les tags et les étoiles pour la version desktop */}
       <div className='tag-and-stars'>
         <div className='tags'>
           {logement.tags.map((tag, index) => (
@@ -78,8 +80,18 @@ const Logement = () => {
         </div>
         {renderStars(logement.rating)}
       </div>
+
+      {/* Nouvelle div pour afficher les tags en version mobile */}
+      <div className='tags-mobile'>
+        <div className='tags'>
+          {logement.tags.map((tag, index) => (
+            <button key={index} className='tag-button'>{tag}</button>
+          ))}
+        </div>
+      </div>
+
       <div className='author-and-stars-mobile'>
-        {renderStars(logement.rating)}
+        <div>{renderStars(logement.rating)}</div>
         <div className='author'>
           <img 
             src={logement.host.picture} 
@@ -89,6 +101,7 @@ const Logement = () => {
           <p className='author-name'>{logement.host.name}</p>
         </div>
       </div>
+
       <div className='collapse-container'> 
         <Collapse title="Description">{logement.description}</Collapse>
         <Collapse title="Equipement">{logement.equipments.join(', ')}</Collapse>
@@ -98,3 +111,4 @@ const Logement = () => {
 };
 
 export default Logement;
+

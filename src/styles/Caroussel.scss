@@ -65,15 +65,15 @@
       padding: 5px 10px;
       border-radius: 5px;
     }
-  
     @media (max-width: 768px) {
-      .carousel-button {
-        padding: 5px;
+      .carousel-button img {
+        width: 30px; /* Taille des flèches sur tablette */
       }
     }
-  }
-  @media (max-width: 500px) {
-    .carousel-pagination{
-      display: none;
+  
+    @media (max-width: 500px) {
+      .carousel-button img {
+        width: 25px; /* Taille des flèches sur mobile */
+      }
     }
   }
